@@ -9,8 +9,8 @@
 @tailwind utilities;
 
 :root {
-  @apply h-full bg-[#222];
+  @apply h-full bg-[#111];
 }
 body {
-  @apply h-full bg-[#222];
+  @apply h-full bg-[#111];
 }

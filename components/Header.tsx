@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ label, showBackArrow }) => {
     router.back();
   }, [router]);
   return (
-    <div className="border-b-[1px] border-neutral-700 px-4 py-3">
+    <div className="border-b-[1px] border-neutral-800 px-4 py-3">
       <div className="flex flex-row items-center gap-2">
         {showBackArrow && (
           <BiArrowBack

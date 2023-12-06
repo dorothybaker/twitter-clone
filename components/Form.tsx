@@ -47,7 +47,7 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
   }, [body, mutatePosts, isComment, postId, mutatePost]);
 
   return (
-    <div className="border-b-[1px] border-neutral-700 px-3 py-2">
+    <div className="border-b-[1px] border-neutral-800 px-3 py-2">
       {currentUser ? (
         <div className="flex flex-row gap-4">
           <div>
@@ -61,7 +61,7 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
               className="disabled:opacity-80 peer resize-none mt-2 w-full bg-transparent ring-0 outline-none placeholder-neutral-400 text-white"
               placeholder={placeholder}
             ></textarea>
-            <hr className="opacity-0 peer-focus:opacity-100 h-[1px] w-full border-neutral-700 transition" />
+            <hr className="opacity-0 peer-focus:opacity-100 h-[1px] w-full border-neutral-800 transition" />
             <div className="flex flex-row mt-3 justify-end">
               <Button
                 label="Tweet"

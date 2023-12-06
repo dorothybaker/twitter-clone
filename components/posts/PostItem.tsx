@@ -59,7 +59,7 @@ const PostItem: React.FC<PostItemProps> = ({ data, userId }) => {
   return (
     <div
       onClick={goToPost}
-      className="border-b-[1px] border-neutral-700 p-3 cursor-pointer hover:bg-neutral-900 transition"
+      className="border-b-[1px] border-neutral-800 p-3 cursor-pointer hover:bg-neutral-900 transition"
     >
       <div className="flex flex-row items-start gap-2">
         <div>
