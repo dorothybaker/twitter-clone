@@ -25,7 +25,7 @@ const Sidebar = () => {
     },
   ];
   return (
-    <div className="col-span-1 h-full pr-4 md:pr-6 pt-2">
+    <div className="col-span-1 h-full pr-2 md:pr-4 pt-2">
       <div className="flex flex-col items-end">
         <div className="space-y-3 lg:w-[230px]">
           <SideBarLogo />
