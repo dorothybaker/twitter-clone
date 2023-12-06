@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
+
+* {
+  font-family: "Jost";
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply h-full bg-[#222];
+}
+body {
+  @apply h-full bg-[#222];
+}
