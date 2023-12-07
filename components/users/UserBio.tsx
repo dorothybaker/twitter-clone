@@ -39,8 +39,6 @@ const UserBio: React.FC<UserBioProps> = ({ userId }) => {
   } else {
     following = fetchedUser?.followingIds;
   }
-
-  const uniqueFollowing = new Set(following);
   return (
     <div className="border-b-[1px] border-neutral-800 pb-4">
       <div className="flex justify-end p-2">

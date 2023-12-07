@@ -19,9 +19,13 @@ export default async function handler(
     const existingUser = await prisma.user.findUnique({
       where: { id: userId },
     });
-    const followersCount = await prisma.user.count({
+
+    const usersWithUserId = await prisma.user.findMany({
       where: { followingIds: { has: userId } },
+      select: { id: true }, // Assuming 'id' is the field that uniquely identifies each user
     });
+    const uniqueUserIds = new Set(usersWithUserId.map((user) => user.id));
+    const followersCount = uniqueUserIds.size;
 
     return res.status(200).json({ ...existingUser, followersCount });
   } catch (error) {
