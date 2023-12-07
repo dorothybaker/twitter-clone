@@ -28,6 +28,19 @@ const UserBio: React.FC<UserBioProps> = ({ userId }) => {
     return format(new Date(fetchedUser.createdAt), "MMMM yyyy");
   }, [fetchedUser?.createdAt]);
 
+  let following;
+
+  function followFilter(theId: string) {
+    return theId !== currentUser?.id;
+  }
+
+  if (currentUser?.id === userId) {
+    following = currentUser?.followingIds.filter(followFilter);
+  } else {
+    following = fetchedUser?.followingIds;
+  }
+
+  const uniqueFollowing = new Set(following);
   return (
     <div className="border-b-[1px] border-neutral-800 pb-4">
       <div className="flex justify-end p-2">
@@ -55,9 +68,7 @@ const UserBio: React.FC<UserBioProps> = ({ userId }) => {
         </div>
         <div className="flex flex-row items-center gap-5 mt-4">
           <div className="flex flex-row items-center gap-1">
-            <p className="text-white">
-              {currentUser?.followingIds.length || 0}
-            </p>
+            <p className="text-white">{following?.length || 0}</p>
             <p className="text-neutral-400">Following</p>
           </div>
           <div className="flex flex-row items-center gap-1">
